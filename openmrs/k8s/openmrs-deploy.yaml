@@ -7,7 +7,7 @@ spec:
   minReadySeconds: 30
   strategy:
     type: RollingUpdate
-    RollingUpdate:
+    rollingUpdate:
       maxSurge: 1
       maxUnavailable: 1
   template:
@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
       - name: openmrs
-        image: mallikarjunangadi/openmrs
+        image: mallikarjunangadi/openmrs:2.1.2
         ports:
         - containerPort: 8080
